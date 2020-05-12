@@ -56,8 +56,6 @@ def level_up(cat):
         elif cat.level == 4:
             learn_move("MEGA! ULTRA! SCRATCH!", 1.60)
 
-
-
 def restore_hp(cat):
     while cat.current_health < cat.health:
         cat.current_health += 1
@@ -253,7 +251,6 @@ def run_game(yours, other1, other2, other3, other4):
         else:
             print("nothing interesting today")
 
-
 yourcat = input("Choose your cat:\n Tomithy, Harley, Thumbs, Gloria, or Big Chungus?")
 
 if yourcat.upper() == Cat1.name.upper():
@@ -278,48 +275,5 @@ while yourcat.upper() == Cat3.name.upper() and Cat3.current_health > 0:
 while yourcat.upper() == Cat4.name.upper() and Cat4.current_health > 0:
     run_game(Cat4, Cat2, Cat3, Cat1, Cat5)
 while yourcat.upper() == Cat5.name.upper() and Cat5.current_health > 0:
-    if Cat5.current_health < (0.3 * Cat5.health):
-        take_meds(Cat5)
-    choice = input("alright, now what? nap, sharpen claws, roam? Or check stats?")
-    if choice.lower() == "sharpen claws":
-        sharpen_claws(Cat5)
-    elif choice.lower() == "stats":
-        stats(Cat5)
-    elif choice.lower() == "nap":
-        nap(Cat5)
-    elif choice.lower() == "roam":
-        number = random.randint(0, 2)
-        if number == 0:
-            number1 = random.randint(0, 2)
-            if number1 == 0:
-                print("you encountered a level " + str(Bird1.level) + " bird!")
-                for period in "...":
-                    print(period)
-                    time.sleep(1)
-                bird_catching(Cat5, Bird1)
-            if number1 == 1:
-                print("you encountered a level " + str(Bird2.level) + " bird!")
-                for period in "...":
-                    print(period)
-                    time.sleep(1)
-                bird_catching(Cat5, Bird2)
-            if number1 == 2:
-                print("you encountered a level " + str(Bird3.level) + " bird!")
-                for period in "...":
-                    print(period)
-                    time.sleep(1)
-                bird_catching(Cat5, Bird3)
-        elif number == 1:
-            print("unrecognised cat approaching!")
-            opponent = random.randint(0, 3)
-            if opponent == 0:
-                cat_fight(Cat5, Cat1)
-            elif opponent == 1:
-                cat_fight(Cat5, Cat2)
-            elif opponent == 2:
-                cat_fight(Cat5, Cat3)
-            else:
-                cat_fight(Cat5, Cat4)
-        else:
-            print("nothing interesting today")
+    run_game(Cat5, Cat2, Cat3, Cat4, Cat1)
 print("you died")
