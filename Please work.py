@@ -50,11 +50,11 @@ def level_up(cat):
             cat.health)) + " +3" + "\nSpeed:" + str(
             cat.speed) + " +0.5" + "\nXP:" + str(cat.XP))
         if cat.level == 2:
-            learn_move("SUPER SCRATCH", 0.9)
+            learn_move(attack4.name, attack4.power)
         elif cat.level == 3:
-            learn_move("VENOMOUS BITE", 1.0)
+            learn_move(attack5.name, attack5.power)
         elif cat.level == 4:
-            learn_move("MEGA! ULTRA! SCRATCH!", 1.60)
+            learn_move(attack6.name, attack6.power)
 
 def restore_hp(cat):
     while cat.current_health < cat.health:
