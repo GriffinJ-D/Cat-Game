@@ -1,5 +1,3 @@
-import time
-import random
 class Cat:
     def __init__(self, name, level, weight, attack, health, speed, current_health, XP):
         self.name = name
