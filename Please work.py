@@ -23,6 +23,8 @@ bruh = "."
 attack_set = ["SWIPE", "BITE", "SCRATCH"]
 power_set = [0.4, 0.3, 0.5]
 
+# I wrote this
+
 def learn_move(Move_name, Power):
     choice1 = input("Your cat wants to learn " + Move_name + ", do you want to forget an attack and learn " + Move_name + "? Enter yes or no.")
     while choice1.lower() == "yes":
